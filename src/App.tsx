@@ -1,14 +1,19 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from '@pages/Home'
-import './App.css'
 
+import './App.css'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import Admin from './pages/Admin'
 function App() {
+ 
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <>
+       <BrowserRouter>
+        <Routes>
+         <Route path="/admin/:navigatedata" element={<Admin />} />
+         <Route path="*" element={"Page Not Found"} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
