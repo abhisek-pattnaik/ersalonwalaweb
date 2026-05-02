@@ -1,148 +1,73 @@
-# Salon App
+# React + TypeScript + Vite
 
-A modern React application for salon management built with Vite, TypeScript, and React Router.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Getting Started
+Currently, two official plugins are available:
 
-### Prerequisites
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- Node.js (v18 or higher)
-- npm or yarn
+## React Compiler
 
-### Installation
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-1. Install dependencies:
-```bash
-npm install
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-2. Start the development server:
-```bash
-npm run dev
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-3. Build for production:
-```bash
-npm run build
-```
-
-4. Preview production build:
-```bash
-npm run preview
-```
-
-## 📁 Project Structure
-
-```
-salon-app/
-├── public/                 # Static assets
-├── src/
-│   ├── assets/            # Images, fonts, and other static files
-│   ├── components/        # Reusable UI components
-│   │   └── common/        # Common components (Button, Input, etc.)
-│   │   └── layout/        # Layout components (Header, Footer, etc.)
-│   ├── constants/         # Application constants
-│   ├── contexts/          # React Context providers
-│   ├── hooks/             # Custom React hooks
-│   ├── pages/             # Page components (route components)
-│   ├── services/          # API services and external integrations
-│   ├── types/             # TypeScript type definitions
-│   ├── utils/             # Utility functions
-│   ├── App.tsx            # Main App component with routing
-│   ├── App.css            # App-specific styles
-│   ├── main.tsx           # Application entry point
-│   └── index.css          # Global styles
-├── .eslintrc.cjs          # ESLint configuration
-├── .gitignore             # Git ignore rules
-├── index.html             # HTML template
-├── package.json           # Dependencies and scripts
-├── tsconfig.json          # TypeScript configuration
-├── tsconfig.node.json     # TypeScript config for Node
-└── vite.config.ts         # Vite configuration
-```
-
-## 🏗️ Architecture
-
-### Folder Organization
-
-- **components/**: Reusable UI components organized by feature or type
-- **pages/**: Top-level route components
-- **hooks/**: Custom React hooks for shared logic
-- **services/**: API calls and external service integrations
-- **utils/**: Pure utility functions
-- **contexts/**: React Context providers for global state
-- **types/**: TypeScript interfaces and types
-- **constants/**: Application-wide constants
-
-### Path Aliases
-
-The project uses path aliases for cleaner imports:
-
-- `@/` → `src/`
-- `@components/` → `src/components/`
-- `@pages/` → `src/pages/`
-- `@hooks/` → `src/hooks/`
-- `@services/` → `src/services/`
-- `@utils/` → `src/utils/`
-- `@contexts/` → `src/contexts/`
-- `@assets/` → `src/assets/`
-- `@constants/` → `src/constants/`
-- `@types/` → `src/types/`
-
-Example usage:
-```typescript
-import { apiClient } from '@services/api'
-import { formatDate } from '@utils'
-import Home from '@pages/Home'
-```
-
-## 🛠️ Technologies
-
-- **React 18** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **React Router** - Client-side routing
-- **ESLint** - Code linting
-
-## 📝 Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-VITE_API_BASE_URL=http://localhost:3000/api
-```
-
-## 📦 Adding New Features
-
-### Adding a New Page
-
-1. Create component in `src/pages/`
-2. Add route in `src/App.tsx`
-3. Update `src/constants/routes.ts` if needed
-
-### Adding a New Component
-
-1. Create component in `src/components/`
-2. Organize by feature or type (e.g., `components/common/`, `components/booking/`)
-
-### Adding API Services
-
-1. Create service file in `src/services/`
-2. Use `apiClient` from `src/services/api.ts` for HTTP requests
-
-## 🎨 Styling
-
-Global styles are in `src/index.css`. Component-specific styles can be added as CSS modules or styled-components based on your preference.
-
-## 📄 License
-
-MIT
