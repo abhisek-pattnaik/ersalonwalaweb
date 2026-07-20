@@ -1,7 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faUser, 
-  faPen, 
   faGear, 
   faMoon, 
   faSun, 

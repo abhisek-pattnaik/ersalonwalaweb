@@ -7,18 +7,12 @@ import {
   faPlus,
   faBuilding,
   faChevronDown,
-  faLocationDot,
-  faFloppyDisk,
-  faPhone,
-  faUsers,
   faArrowUpRightFromSquare,
   faEllipsis,
   faShieldHalved,
   faTriangleExclamation,
   faPen,
-  faEye,
   faClock,
-  
   faCircleDot
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';

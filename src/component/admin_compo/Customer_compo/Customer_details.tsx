@@ -7,15 +7,7 @@ import {
   faPlus, 
   faEllipsisVertical, 
   faChevronLeft, 
-  faChevronRight, 
-  faMagnifyingGlass, 
-  faFilter, 
-  faEye, 
-  faEnvelope, 
-  faPhone, 
-  faLocationDot, 
-  faCalendarDays, 
-  faCreditCard 
+  faChevronRight 
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 export default function Customer_details() {

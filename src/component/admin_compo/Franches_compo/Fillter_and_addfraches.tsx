@@ -4,10 +4,8 @@ import { useState } from 'react';
 import Add_FranchiesModel from './Add_FranchiesModel';
 export default function Fillter_and_addfraches() {
  const [isOpenmodel,setIsOpenmodel]=useState(false)
-  const [oncloseModel,setoncloseModel]=useState(true)
   const Addnewpatner=()=>{
      setIsOpenmodel(true)
-     setoncloseModel(false)
   }
   return (
     <>

@@ -1,13 +1,8 @@
-import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import '../CSS/Sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,
-  faSearch,
-  faBell,
-  faCog,
-  faUser,
+import {
   faSignOutAlt,
   faTachometerAlt,
   faChartLine,
@@ -20,7 +15,6 @@ import { faBars,
   faTicketAlt,
   faImage,
   faCog as faSettings,
-  faTimes,
   faChevronLeft,
   faChevronRight
 } from '@fortawesome/free-solid-svg-icons';

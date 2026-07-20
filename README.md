@@ -71,3 +71,41 @@ export default defineConfig([
   },
 ])
 ```
+
+## Docker Setup
+
+### Prerequisites
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running.
+
+### Using Docker Compose (Recommended)
+
+1. **Build and start the container:**
+   ```bash
+   docker compose up --build -d
+   ```
+2. **Access the web app:**
+   Open [http://localhost:8080](http://localhost:8080) in your browser.
+
+3. **Stop the container:**
+   ```bash
+   docker compose down
+   ```
+
+### Using Docker CLI
+
+1. **Build the Docker image:**
+   ```bash
+   docker build -t ersalonwala-web .
+   ```
+
+2. **Run the container:**
+   ```bash
+   docker run -d -p 8080:80 --name ersalonwala_web ersalonwala-web
+   ```
+
+3. **Stop & remove the container:**
+   ```bash
+   docker stop ersalonwala_web
+   docker rm ersalonwala_web
+   ```
+

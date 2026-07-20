@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function CreateSalonPageOffcanvas({ isOpen = true, onClose}: { isOpen: boolean; onClose: () => void }) {
   const [pageTitle, setPageTitle] = useState('');
