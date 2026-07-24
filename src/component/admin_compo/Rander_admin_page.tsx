@@ -6,6 +6,7 @@ import Customer_section from "./Customer_section"
 
 import Dashboard_section from "./Dashboard_section"
 import Farches_section from "./Farches_section"
+import OffersAndCouponSection from "./OffersAndCouponSection"
 import Outlet_section from "./Outlet_section"
 import Payment_section from "./Payment_section"
 import Salon_managment_section from "./Salon_managment_section"
@@ -61,6 +62,12 @@ export default function Rander_admin_page({ navigatedata }: { navigatedata: stri
   if (navigatedata === "Settings") {
     return (
       <SettingSection />
+    )
+  }
+
+  if (navigatedata === "Offer and Coupons") {
+    return (
+      <OffersAndCouponSection/>
     )
   }
 

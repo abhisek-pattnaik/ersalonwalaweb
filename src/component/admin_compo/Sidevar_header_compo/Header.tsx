@@ -33,7 +33,9 @@ export default function Header({ navigatedata, onToggleMobileSidebar }: HeaderPr
     
                     {/* Navigation Data */}
                     <div className="flex items-center text-sm font-medium">
-                      <h1 className="text-white font-bold text-base md:text-lg">{navigatedata}</h1>
+                      <h1 className="text-white font-bold text-base md:text-lg">
+                        {navigatedata === "Offer and Coupons" ? "Offers / Coupons" : navigatedata}
+                      </h1>
                     </div>
     
                     {/* Search Bar */}
@@ -45,7 +47,7 @@ export default function Header({ navigatedata, onToggleMobileSidebar }: HeaderPr
                         />
                         <input
                           type="search"
-                          placeholder="Search analytics for report"
+                          placeholder={navigatedata === "Offer and Coupons" ? "Search offers or codes..." : "Search analytics for report"}
                           className="w-full bg-gray-800 text-white placeholder-gray-500 
                                    pl-10 pr-4 py-2 rounded-3xl border border-gray-700
                                    focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500
