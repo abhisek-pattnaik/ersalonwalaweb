@@ -48,7 +48,7 @@ export default function Recent_booking() {
   ];
   return (
    <>
-   <div className="bg-[#0b111e] text-white p-8 rounded-2xl w-full border border-slate-800/60 shadow-2xl font-sans ml-2">
+   <div className="bg-[#0b111e] text-white p-8 rounded-2xl w-full border border-slate-800/60 shadow-2xl font-sans">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-lg font-medium tracking-wide text-slate-200">Recent Bookings</h2>

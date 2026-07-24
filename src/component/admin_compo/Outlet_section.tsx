@@ -9,7 +9,7 @@ export default function Outlet_section() {
      <main className="p-6">
         <Outlet_cards/>
         <Fillter_and_newoutlet/>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <Outlet_filter_add/>
             <Outlet_utilization/>
         </div>

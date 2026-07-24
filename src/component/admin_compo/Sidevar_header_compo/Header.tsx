@@ -1,5 +1,4 @@
 
-import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
      faBars,
@@ -9,14 +8,13 @@ import {
 
  } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
-export default function Header({ navigatedata }: { navigatedata: string }) {
-const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
-const navigate = useNavigate();
-  
-  
-  const toggleMobileSidebar = () => {
-    setIsMobileSidebarOpen(!isMobileSidebarOpen);
-  };
+interface HeaderProps {
+  navigatedata: string;
+  onToggleMobileSidebar: () => void;
+}
+
+export default function Header({ navigatedata, onToggleMobileSidebar }: HeaderProps) {
+  const navigate = useNavigate();
   return (
     <>
       {/* Header */}
@@ -27,19 +25,19 @@ const navigate = useNavigate();
                   <div className="flex items-center space-x-4 flex-1">
                     {/* Mobile Menu Button */}
                     <button
-                      onClick={toggleMobileSidebar}
-                      className="lg:hidden text-gray-400 hover:text-white transition-colors"
+                      onClick={onToggleMobileSidebar}
+                      className="lg:hidden text-gray-400 hover:text-white transition-colors cursor-pointer"
                     >
                       <FontAwesomeIcon icon={faBars} className="w-6 h-6" />
                     </button>
     
                     {/* Navigation Data */}
-                    <div className="hidden md:flex items-center space-x-10 text-sm w-37 font-medium">
-                      <h1 className="text-white font-bold">{navigatedata}</h1>
+                    <div className="flex items-center text-sm font-medium">
+                      <h1 className="text-white font-bold text-base md:text-lg">{navigatedata}</h1>
                     </div>
     
                     {/* Search Bar */}
-                    <div className="flex-1 max-w-md ml-4">
+                    <div className="hidden md:block flex-1 max-w-md ml-4">
                       <div className="relative">
                         <FontAwesomeIcon
                           icon={faSearch}

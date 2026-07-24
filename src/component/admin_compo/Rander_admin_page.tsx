@@ -9,56 +9,64 @@ import Farches_section from "./Farches_section"
 import Outlet_section from "./Outlet_section"
 import Payment_section from "./Payment_section"
 import Salon_managment_section from "./Salon_managment_section"
+import SettingSection from "./SettingPage"
 import Staf_section from "./Staf_section"
 
-export default function Rander_admin_page({navigatedata}:{navigatedata:string}) {
-    if (navigatedata==="Dashboard"){
-         return (
-           <Dashboard_section/>
-       )
-    }
-     if(navigatedata==="Finances Management")
-  return (
-   <Farches_section/>
-  )
-  if(navigatedata==="Outlet Management"){
+export default function Rander_admin_page({ navigatedata }: { navigatedata: string }) {
+  if (navigatedata === "Dashboard") {
     return (
-       <Outlet_section/>
+      <Dashboard_section />
     )
   }
-  if(navigatedata==="Salon Management"){
+  if (navigatedata === "Finances Management")
     return (
-       <Salon_managment_section/>
+      <Farches_section />
+    )
+  if (navigatedata === "Outlet Management") {
+    return (
+      <Outlet_section />
     )
   }
-  if(navigatedata==="Booking Management"){
+  if (navigatedata === "Salon Management") {
     return (
-        <Booking_section/>
+      <Salon_managment_section />
     )
   }
-  if(navigatedata==="Staff Management"){
+  if (navigatedata === "Booking Management") {
     return (
-       <Staf_section/>
+      <Booking_section />
     )
   }
-  if(navigatedata==="Customer"){
+  if (navigatedata === "Staff Management") {
     return (
-       <Customer_section/>
+      <Staf_section />
     )
   }
-  if(navigatedata==="Payments"){
+  if (navigatedata === "Customer") {
     return (
-      <Payment_section/>
+      <Customer_section />
     )
   }
-  if(navigatedata==="CMS and Banner"){
+  if (navigatedata === "Payments") {
     return (
-      <CMS_and_Banner_section/>
+      <Payment_section />
     )
   }
-  if(navigatedata==="profile"){
+  if (navigatedata === "CMS and Banner") {
     return (
-      <Admin_profile_section/>
+      <CMS_and_Banner_section />
+    )
+  }
+
+  if (navigatedata === "Settings") {
+    return (
+      <SettingSection />
+    )
+  }
+
+  if (navigatedata === "profile") {
+    return (
+      <Admin_profile_section />
     )
   }
 }

@@ -22,12 +22,12 @@ export default function Salon_status() {
   ];
   return (
     <>
-    <div className="  w-100 font-sans gap-2">
+    <div className="w-full lg:w-80 font-sans gap-2">
       <div className="space-y-2">
         {stats.map((stat) => (
           <div
             key={stat.id}
-            className="flex items-center bg-[#0f172a] border border-slate-800 rounded-xl p-2 transition-all duration-200 hover:border-slate-700 hover:bg-[#151f32] w-80"
+            className="flex items-center bg-[#0f172a] border border-slate-800 rounded-xl p-4 transition-all duration-200 hover:border-slate-700 hover:bg-[#151f32] w-full lg:w-80"
           >
             {/* Vertical Indicator Bar */}
             <div className={`w-1.5 h-10 rounded-full ${stat.color} mr-5 shadow-[0_0_8px_rgba(0,0,0,0.2)]`} />
