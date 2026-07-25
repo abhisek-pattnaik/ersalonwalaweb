@@ -1,0 +1,18 @@
+services:
+  admin:
+    build:
+      context: ./apps/admin
+      dockerfile: Dockerfile
+    container_name: ersalonwala_admin_web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  customer:
+    build:
+      context: ./apps/customer
+      dockerfile: Dockerfile
+    container_name: ersalonwala_customer_web
+    ports:
+      - "8081:80"
+    restart: unless-stopped
