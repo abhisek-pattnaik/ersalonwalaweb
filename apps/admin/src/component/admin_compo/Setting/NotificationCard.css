@@ -1,0 +1,102 @@
+.notification-card {
+    width: 100%;
+    height: 100%;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 24px;
+    color: #f8fafc;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    box-sizing: border-box;
+}
+
+.notification-header {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.header-icon {
+    color: #60a5fa;
+    margin-top: 2px;
+}
+
+.notification-header h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+    color: #f8fafc;
+}
+
+.notification-header p {
+    margin: 8px 0 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.notification-list {
+    margin-top: 32px;
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.notification-item:last-child {
+    margin-bottom: 0;
+}
+
+.notification-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 15px;
+    color: #f8fafc;
+    font-weight: 400;
+}
+
+.item-icon {
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+}
+
+/* Toggle Switch Styling */
+
+.toggle {
+    width: 44px;
+    height: 24px;
+    border: none;
+    border-radius: 999px;
+    background: #1e293b;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0;
+}
+
+.toggle.active {
+    background: #1e3a8a;
+    /* Deep blue track */
+}
+
+.toggle-thumb {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    /* Gray thumb for inactive */
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), background-color 0.3s;
+}
+
+.toggle.active .toggle-thumb {
+    transform: translateX(20px);
+    background: #7dd3fc;
+    /* Light blue thumb for active */
+}

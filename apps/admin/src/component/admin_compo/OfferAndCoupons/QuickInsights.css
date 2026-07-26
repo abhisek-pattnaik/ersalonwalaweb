@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+.quick-insights {
+    background: #0f1524;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 18px 20px;
+    color: #fff;
+}
+
+.quick-insights h3 {
+    margin: 0 0 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Rows */
+
+.insight-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.insight-row span:first-child {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.rate {
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.amount {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Progress */
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #121824;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #60a5fa 0%, #2563eb 100%);
+    transition: width .4s ease;
+}
+
+/* Revenue Row */
+
+.revenue {
+    margin-bottom: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .quick-insights {
+        padding: 16px;
+    }
+
+    .quick-insights h3 {
+        font-size: 15px;
+    }
+
+    .insight-row span {
+        font-size: 13px;
+    }
+}
