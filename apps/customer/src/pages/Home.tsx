@@ -4,6 +4,7 @@ import heroStylistImg from '../assets/hero_stylist.png';
 import facialImg from '../assets/facial_treatment.png';
 import masterStylistImg from '../assets/master_stylist.png';
 import './Pages.css';
+import HeaderSection from '@/components/home/header';
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('Hair Cut');
@@ -110,37 +111,7 @@ export default function Home() {
   return (
     <div className="home-container">
       {/* HERO SECTION */}
-      <section className="hero-section">
-        <div className="hero-watermark">Engineered Salonwala.</div>
-        <div className="hero-grid">
-          <div className="hero-text-content">
-            <h1 className="hero-title">
-              Precision Engineering Meets <span className="serif-italic">Organic Beauty.</span>
-            </h1>
-            <p className="hero-subtitle">
-              Tailored treatments and scientific precision for your personal grooming needs. Discover top-rated salons near you.
-            </p>
-            <div className="hero-actions">
-              <Link to="/salons" className="btn-hero-primary">
-                Book Appointment
-              </Link>
-            </div>
-          </div>
-
-          <div className="hero-collage">
-            <div className="collage-circle-main">
-              <img src={heroStylistImg} alt="Stylist at work" />
-            </div>
-            <div className="collage-pill-sub1">
-              <img src={facialImg} alt="Facial treatment" />
-            </div>
-            <div className="collage-pill-sub2">
-              <img src={masterStylistImg} alt="Master barber" />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <HeaderSection />
       {/* SECTION 2: EXPERIENCED IN MAKING YOU BEAUTIFUL */}
       <section className="experienced-section">
         <div className="section-header">
