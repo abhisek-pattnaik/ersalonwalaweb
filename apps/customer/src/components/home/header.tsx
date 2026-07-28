@@ -1,7 +1,5 @@
-import heroStylistImg from '@/assets/hero_stylist.png';
-import facialImg from '@/assets/facial_treatment.png';
-import masterStylistImg from '@/assets/master_stylist.png';
 import './header.css';
+import SalonGallery from './SalonGallary';
 
 const HeaderSection = () => {
     return (
@@ -41,17 +39,7 @@ const HeaderSection = () => {
                     </div>
                 </div>
 
-                <div className="hero-collage">
-                    <div className="collage-circle-main">
-                        <img src={heroStylistImg} alt="Stylist at work" />
-                    </div>
-                    <div className="collage-pill-sub1">
-                        <img src={facialImg} alt="Facial treatment" />
-                    </div>
-                    <div className="collage-pill-sub2">
-                        <img src={masterStylistImg} alt="Master barber" />
-                    </div>
-                </div>
+                <SalonGallery />
             </div>
         </section>
     );

@@ -145,21 +145,21 @@
 
 .collage-pill-sub1 {
     position: absolute;
-    bottom: 20px;
-    right: 250px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    top: 400px;
+    right: 310px;
+    width: 120px;
+    height: 140px;
+    border-radius: 70px 0 0 70px;
     overflow: hidden;
 }
 
 .collage-pill-sub2 {
     position: absolute;
-    bottom: 0px;
-    right: 120px;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+    top: 400px;
+    right: 180px;
+    width: 120px;
+    height: 140px;
+    border-radius: 0 70px 70px 0;
     overflow: hidden;
 }
 
