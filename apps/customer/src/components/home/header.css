@@ -5,22 +5,30 @@
     padding: 140px 60px 100px;
     display: flex;
     width: 100%;
+    flex-direction: column;
 }
+
+.main-container-header {}
 
 .hero-watermark {
     position: absolute;
-    bottom: 20px;
-    right: 15%;
+    top: 40%;
+    left: 48%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+
     font-size: 140px;
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
+
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+
     line-height: 0.9;
-    text-align: right;
+    text-align: center;
     white-space: nowrap;
     pointer-events: none;
-    z-index: 0;
+    z-index: 10;
 }
 
 .hero-scissor-scatter {
@@ -69,7 +77,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 40px;
+    gap: 100px;
     max-width: 1280px;
     margin: 0 auto;
     position: relative;

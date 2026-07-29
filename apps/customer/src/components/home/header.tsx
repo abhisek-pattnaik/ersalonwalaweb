@@ -1,8 +1,10 @@
+import FranchiseSection from './FranchiseSection';
 import './header.css';
 import SalonGallery from './SalonGallary';
 
 const HeaderSection = () => {
     return (
+        <>
         <section className="hero-section">
             <div className="hero-watermark">
                 Engineer<br />Salon wala.
@@ -42,6 +44,8 @@ const HeaderSection = () => {
                 <SalonGallery />
             </div>
         </section>
+        <FranchiseSection />
+        </>
     );
 };
 

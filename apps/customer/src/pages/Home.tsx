@@ -5,6 +5,8 @@ import facialImg from '../assets/facial_treatment.png';
 import masterStylistImg from '../assets/master_stylist.png';
 import './Pages.css';
 import HeaderSection from '@/components/home/header';
+import BeautyGalary from '@/components/home/BeautyGalary';
+import CategorySection from '@/components/home/CategorySection';
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('Hair Cut');
@@ -112,49 +114,15 @@ export default function Home() {
     <div className="home-container">
       {/* HERO SECTION */}
       <HeaderSection />
-      {/* SECTION 2: EXPERIENCED IN MAKING YOU BEAUTIFUL */}
-      <section className="experienced-section">
-        <div className="section-header">
-          <h2>We are Experienced in making you very beautiful</h2>
-          <p>Combine science and artistry to deliver customized salon results for every client.</p>
-        </div>
 
-        <div className="beauty-gallery-grid">
-          <div className="gallery-card card-large">
-            <img src={facialImg} alt="Skincare facial" />
-            <div className="card-overlay">
-              <h3>Facial & Skincare</h3>
-            </div>
-          </div>
-          <div className="gallery-card">
-            <img src={heroStylistImg} alt="Hair Styling" />
-            <div className="card-overlay">
-              <h3>Precision Hair Care</h3>
-            </div>
-          </div>
-          <div className="gallery-card">
-            <img src={masterStylistImg} alt="Grooming" />
-            <div className="card-overlay">
-              <h3>Beard & Grooming</h3>
-            </div>
-          </div>
-          <div className="gallery-card">
-            <img src={facialImg} alt="Spa Massage" />
-            <div className="card-overlay">
-              <h3>Organic Spa Massage</h3>
-            </div>
-          </div>
-          <div className="gallery-card card-wide">
-            <img src={heroStylistImg} alt="Nail & Henna Art" />
-            <div className="card-overlay">
-              <h3>Luxury Nail & Henna</h3>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Galary Section */}
+      <BeautyGalary />
+
+      {/* category section */}
+      <CategorySection />
 
       {/* SECTION 3: CURATED EXPERIENCES */}
-      <section className="curated-section" id="services">
+      {/* <section className="curated-section" id="services">
         <div className="section-header">
           <h2>Curated Experiences</h2>
           <p>Explore tailored treatments categorized for your specific personal care needs.</p>
@@ -175,7 +143,7 @@ export default function Home() {
           </div>
           <div className="pedestal-glow"></div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 4: RECOMMENDED SALONS */}
       <section className="recommended-section" id="recommended">
