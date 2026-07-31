@@ -7,6 +7,10 @@ import './Pages.css';
 import HeaderSection from '@/components/home/header';
 import BeautyGalary from '@/components/home/BeautyGalary';
 import CategorySection from '@/components/home/CategorySection';
+import RecommendedSection from '@/components/home/RecommendedSection';
+import DownloadSection from '@/components/home/DownloadSection';
+import TestimonialSection from '@/components/home/TestimonialSection';
+import EngineerSection from '@/components/home/EngineerSection';
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('Hair Cut');
@@ -121,148 +125,16 @@ export default function Home() {
       {/* category section */}
       <CategorySection />
 
-      {/* SECTION 3: CURATED EXPERIENCES */}
-      {/* <section className="curated-section" id="services">
-        <div className="section-header">
-          <h2>Curated Experiences</h2>
-          <p>Explore tailored treatments categorized for your specific personal care needs.</p>
-        </div>
-
-        <div className="categories-stage">
-          <div className="categories-pills">
-            {categories.map((cat) => (
-              <button
-                key={cat.name}
-                className={`category-pill ${activeCategory === cat.name ? 'active' : ''}`}
-                onClick={() => setActiveCategory(cat.name)}
-              >
-                <span className="pill-icon">{cat.icon}</span>
-                <span className="pill-name">{cat.name}</span>
-              </button>
-            ))}
-          </div>
-          <div className="pedestal-glow"></div>
-        </div>
-      </section> */}
-
-      {/* SECTION 4: RECOMMENDED SALONS */}
-      <section className="recommended-section" id="recommended">
-        <div className="section-header">
-          <span className="tag-line">LOOKING FOR THE BEST</span>
-          <h2>Recommended</h2>
-          <p>Curated list of top-rated salon partners nearest to your location.</p>
-        </div>
-
-        <div className="salons-cards-grid">
-          {recommendedSalons.map((salon) => (
-            <div key={salon.id} className="salon-card-item">
-              <div className="card-img-wrapper">
-                <img src={salon.image} alt={salon.name} />
-                <span className="rating-badge">⭐ {salon.rating}</span>
-              </div>
-              <div className="card-info">
-                <h3>{salon.name}</h3>
-                <p className="location-text">📍 {salon.location}</p>
-                <div className="card-footer">
-                  <span className="price-tag">{salon.price}</span>
-                  <Link to={`/book/${salon.id}`} className="btn-card-action">
-                    Book Now
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* RecommendedSection */}
+      <RecommendedSection />
 
       {/* SECTION 5: MOBILE APP PROMO */}
-      <section className="app-promo-section" id="mobile-app">
-        <div className="app-card-box">
-          <div className="app-text-content">
-            <h2>Your Personal Salon Engineered for Ease.</h2>
-            <p>
-              Download the ErSalonWala app to explore live stylist availability, book instant appointments, and manage rewards.
-            </p>
-            <div className="app-badges">
-              <button className="store-btn">
-                <span> App Store</span>
-              </button>
-              <button className="store-btn">
-                <span>▶ Google Play</span>
-              </button>
-            </div>
-          </div>
-          <div className="app-mockup-graphics">
-            <div className="phone-mockup phone-front">
-              <div className="mockup-screen">
-                <div className="screen-header">ErSalonWala App</div>
-                <div className="screen-card">
-                  <span>⭐ 4.9 Top Stylists</span>
-                  <h4>Booking Confirmed</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DownloadSection />
 
       {/* SECTION 6: CLIENT FEEDBACK */}
-      <section className="feedback-section">
-        <div className="section-header">
-          <h2>Real Client Feedback.</h2>
-        </div>
+      <TestimonialSection />
 
-        <div className="feedback-grid">
-          {testimonials.map((t, idx) => (
-            <div key={idx} className="feedback-card">
-              <div className="feedback-stars">{t.stars}</div>
-              <p className="feedback-text">"{t.comment}"</p>
-              <div className="feedback-author">
-                <h4>{t.name}</h4>
-                <span className="verified-badge">{t.role}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* SECTION 7: MEET THE ENGINEERS */}
-      <section className="engineers-section" id="engineers">
-        <div className="section-header">
-          <h2>Meet the Engineers</h2>
-          <p>Engineers of hair & skin design, our master stylists at Salonwala.</p>
-        </div>
-
-        <div className="engineers-grid">
-          {engineers.map((eng, idx) => (
-            <div key={idx} className="engineer-card">
-              <div className="engineer-img-wrapper">
-                <img src={eng.image} alt={eng.name} />
-                <span className="eng-rating">{eng.rating}</span>
-              </div>
-              <div className="engineer-details">
-                <h3>{eng.name}</h3>
-                <span className="engineer-role">{eng.role}</span>
-                <p className="engineer-exp">{eng.exp}</p>
-                <Link to="/salons" className="btn-eng-book">
-                  Book Me
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* SECTION 8: TRANSFORMATION CTA */}
-      <section className="cta-banner-section">
-        <div className="cta-inner">
-          <h2>Ready for Your Next Transformation?</h2>
-          <Link to="/salons" className="btn-hero-primary">
-            Book Appointment
-          </Link>
-          <p className="cta-sub">ErSalonWala. Precision Meets Organic Beauty.</p>
-        </div>
-      </section>
+      <EngineerSection />
 
       {/* FOOTER */}
       <footer className="customer-footer">

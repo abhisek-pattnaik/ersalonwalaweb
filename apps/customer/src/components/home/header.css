@@ -35,8 +35,8 @@
     position: absolute;
     top: 0;
     right: 0;
+    bottom: 0;
     width: 300px;
-    height: 300px;
     pointer-events: none;
 }
 
@@ -54,23 +54,23 @@
 }
 
 .s1 {
-    top: 0px;
+    top: 50px;
     right: 20px;
 }
 
 .s2 {
-    top: 100px;
+    top: 150px;
     right: 120px;
 }
 
 .s3 {
-    top: 170px;
+    top: 230px;
     right: 30px;
 }
 
 .s4 {
-    top: 360px;
-    right: 100px;
+    top: 460px;
+    right: 130px;
 }
 
 .hero-grid {
