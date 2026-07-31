@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #090d18;
+  font-family: "Poppins", sans-serif;
+}
+
+.franchise {
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 28px;
+}
+
+/* Card */
+
+.card {
+  background: #252935;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 32px;
+}
+
+/* LEFT */
+
+.partner-card {
+  background: linear-gradient(180deg, #5d8cff, #3558f5);
+  padding: 28px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-card h2 {
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.partner-card p {
+  margin: 28px 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, .85);
+}
+
+.partner-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin-top: auto;
+}
+
+.partner-card button {
+  margin-top: 24px;
+  height: 58px;
+  border: none;
+  border-radius: 40px;
+  background: #252935;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* RIGHT */
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* Why Choose */
+
+.choose-card {
+  padding: 30px;
+}
+
+.choose-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.choose-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 34px;
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.choose-card hr {
+  margin: 24px 0;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, .15);
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.benefits ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #d3d5dc;
+  line-height: 1.8;
+}
+
+/* Bottom */
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 28px;
+}
+
+/* Investment */
+
+.investment {
+  padding: 28px;
+  color: white;
+}
+
+.small-title {
+  color: #cfcfcf;
+}
+
+.investment h1 {
+  font-size: 56px;
+  margin: 10px 0 24px;
+}
+
+.investment ul {
+  padding-left: 18px;
+  color: #d2d2d2;
+  line-height: 1.9;
+}
+
+.note {
+  margin-top: 24px;
+  background: #3b4050;
+  border-radius: 16px;
+  padding: 18px;
+  color: #ddd;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Stats */
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.stat-card {
+  flex: 1;
+
+  background: linear-gradient(180deg, #5d8cff, #3558f5);
+
+  border-radius: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 40px;
+}
+
+.stat-card h1 {
+  color: white;
+  font-size: 72px;
+  margin: 0;
+}
+
+.stat-card span {
+  color: white;
+  font-size: 28px;
+  text-align: right;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+
+  .franchise {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .stat-card span {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .franchise {
+    padding-top: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .partner-card, .choose-card, .investment {
+    padding: 24px;
+  }
+
+  .partner-card h2 {
+    font-size: 36px;
+  }
+
+  .choose-header h2 {
+    font-size: 26px;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .investment h1 {
+    font-size: 40px;
+    margin: 8px 0 16px;
+  }
+
+  .stat-card {
+    padding: 24px;
+  }
+
+  .stat-card h1 {
+    font-size: 48px;
+  }
+
+  .stat-card span {
+    font-size: 20px;
+  }
+
+}

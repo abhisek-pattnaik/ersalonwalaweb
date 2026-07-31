@@ -1,24 +1,27 @@
+import FranchiseSection from './FranchiseSection';
 import './header.css';
 import SalonGallery from './SalonGallary';
+import { Scissors } from 'lucide-react';
 
 const HeaderSection = () => {
     return (
+        <>
         <section className="hero-section">
             <div className="hero-watermark">
                 Engineer<br />Salon wala.
             </div>
 
             <div className="hero-scissor-scatter">
-                <span className="scatter-icon s1">✂️</span>
-                <span className="scatter-icon s2">✂️</span>
-                <span className="scatter-icon s3">✂️</span>
-                <span className="scatter-icon s4">✂️</span>
+                <div className="scatter-icon s1"><Scissors size={18} /></div>
+                <div className="scatter-icon s2"><Scissors size={18} /></div>
+                <div className="scatter-icon s3"><Scissors size={18} /></div>
+                <div className="scatter-icon s4"><Scissors size={18} /></div>
             </div>
 
             <div className="hero-grid">
                 <div className="hero-text-content">
                     <h1 className="hero-title">
-                        Precision <span className="scissor-icon">✂️</span>
+                        Precision <span className="scissor-icon"><Scissors size={24} /></span>
                         <br />
                         Engineering
                         <br />
@@ -42,6 +45,8 @@ const HeaderSection = () => {
                 <SalonGallery />
             </div>
         </section>
+        <FranchiseSection />
+        </>
     );
 };
 

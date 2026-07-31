@@ -5,30 +5,38 @@
     padding: 140px 60px 100px;
     display: flex;
     width: 100%;
+    flex-direction: column;
 }
+
+.main-container-header {}
 
 .hero-watermark {
     position: absolute;
-    bottom: 20px;
-    right: 15%;
+    top: 40%;
+    left: 48%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+
     font-size: 140px;
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
+
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+
     line-height: 0.9;
-    text-align: right;
+    text-align: center;
     white-space: nowrap;
     pointer-events: none;
-    z-index: 0;
+    z-index: 10;
 }
 
 .hero-scissor-scatter {
     position: absolute;
     top: 0;
     right: 0;
+    bottom: 0;
     width: 300px;
-    height: 300px;
     pointer-events: none;
 }
 
@@ -46,30 +54,30 @@
 }
 
 .s1 {
-    top: 0px;
+    top: 50px;
     right: 20px;
 }
 
 .s2 {
-    top: 100px;
+    top: 150px;
     right: 120px;
 }
 
 .s3 {
-    top: 170px;
+    top: 230px;
     right: 30px;
 }
 
 .s4 {
-    top: 360px;
-    right: 100px;
+    top: 460px;
+    right: 130px;
 }
 
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 40px;
+    gap: 100px;
     max-width: 1280px;
     margin: 0 auto;
     position: relative;
