@@ -555,18 +555,19 @@
 
 /* FOOTER */
 .customer-footer {
-  background: #040609;
+  background: #1f2430;
   border-top: 1px solid var(--border-color);
-  padding: 4rem 2rem 2rem;
+  padding: 2rem 2rem 2rem;
 }
 
 .footer-container {
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .brand-col p {
@@ -594,16 +595,6 @@
 
 .footer-col a:hover {
   color: #60a5fa;
-}
-
-.footer-bottom {
-  max-width: 1280px;
-  margin: 0 auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 1.5rem;
-  text-align: center;
-  color: var(--text-sub);
-  font-size: 0.85rem;
 }
 
 /* RESPONSIVE BREAKPOINTS */
