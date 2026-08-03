@@ -76,47 +76,143 @@
 
 /* Responsive */
 @media (max-width: 992px) {
+
     .download-section {
-        padding: 60px 0 100px;
-        /* Extra bottom padding for image overflow */
+        padding: 60px 0;
     }
 
     .download-container {
         flex-direction: column;
         text-align: center;
-        padding: 50px 20px 0;
-        /* Remove bottom padding so image can drop down */
-        overflow: visible;
-        /* Allow image to break out of bottom */
+        padding: 40px 24px;
+        gap: 30px;
     }
 
-    .download-content,
+    /* Phone image comes first */
     .phone-wrapper {
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: static;
+    }
+
+    /* Content comes second */
+    .download-content {
+        order: 2;
         width: 100%;
     }
 
     .download-content h2 {
-        font-size: 38px;
-        margin-bottom: 30px;
+        font-size: 36px;
+        line-height: 1.3;
     }
 
     .store-buttons {
         justify-content: center;
-    }
-
-    .phone-wrapper {
-        margin-top: 30px;
-        height: auto;
-        align-items: flex-end;
+        flex-wrap: wrap;
     }
 
     .phone-image {
+        position: static;
+        width: 100%;
+        max-width: 380px;
+        transform: none;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+
+    .download-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 60px 40px;
+        gap: 10px;
+    }
+
+    .phone-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .phone-image {
+        position: static;
+        width: 420px;
+        max-width: 100%;
+    }
+
+    .download-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .download-content h2 {
+        font-size: 42px;
+        line-height: 1.2;
+        margin-bottom: 25px;
+    }
+
+    .store-buttons {
+        justify-content: center;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .store-buttons img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .download-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        padding: 0 20px 32px;
+        gap: 20px;
+
         position: relative;
-        right: auto;
-        left: 50%;
-        width: 120%;
-        max-width: 450px;
-        transform: translateX(-50%) translateY(50px);
-        /* Perfectly center horizontally while dropping down */
+        margin-top: 120px;
+        /* Space for image */
+    }
+
+    .phone-wrapper {
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        margin-top: -120px;
+        /* Pull image above card */
+    }
+
+    .phone-image {
+
+        position: static;
+        width: 100%;
+        max-width: 250px;
+        transform: translateY(35px);
+    }
+
+    .download-content {
+        order: 2;
+        width: 100%;
+    }
+
+    .download-content h2 {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .store-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 }
