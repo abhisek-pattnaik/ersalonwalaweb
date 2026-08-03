@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import heroStylistImg from '../assets/hero_stylist.png';
-import facialImg from '../assets/facial_treatment.png';
-import masterStylistImg from '../assets/master_stylist.png';
+import heroStylistImg from '@/assets/hero_stylist.png';
+import facialImg from '@/assets/facial_treatment.png';
+import masterStylistImg from '@/assets/master_stylist.png';
 import './Pages.css';
 import HeaderSection from '@/components/home/header';
 import BeautyGalary from '@/components/home/BeautyGalary';
