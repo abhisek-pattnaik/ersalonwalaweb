@@ -601,8 +601,7 @@
 @media (max-width: 992px) {
 
   .hero-grid,
-  .app-card-box,
-  .footer-container {
+  .app-card-box {
     grid-template-columns: 1fr;
   }
 

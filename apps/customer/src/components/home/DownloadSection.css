@@ -1,6 +1,7 @@
 .download-section {
     background: #0c1220;
-    padding: 140px 0; /* Extra padding to allow image to overflow */
+    padding: 140px 0;
+    /* Extra padding to allow image to overflow */
 }
 
 .download-container {
@@ -10,7 +11,8 @@
 
     background: #111827;
     border: 1px solid rgba(255, 255, 255, .08);
-    border-radius: 32px; /* Smooth large border radius */
+    border-radius: 32px;
+    /* Smooth large border radius */
 
     display: flex;
     align-items: center;
@@ -61,8 +63,10 @@
 
 .phone-image {
     position: absolute;
-    right: -40px; /* Shift it slightly right */
-    width: 140%; /* Make it large enough to break out */
+    right: -40px;
+    /* Shift it slightly right */
+    width: 140%;
+    /* Make it large enough to break out */
     max-width: 750px;
     /* Move it up slightly to break the top border perfectly */
     transform: translateY(-20px);
@@ -73,14 +77,17 @@
 /* Responsive */
 @media (max-width: 992px) {
     .download-section {
-        padding: 60px 0 100px; /* Extra bottom padding for image overflow */
+        padding: 60px 0 100px;
+        /* Extra bottom padding for image overflow */
     }
 
     .download-container {
         flex-direction: column;
         text-align: center;
-        padding: 50px 20px 0; /* Remove bottom padding so image can drop down */
-        overflow: visible; /* Allow image to break out of bottom */
+        padding: 50px 20px 0;
+        /* Remove bottom padding so image can drop down */
+        overflow: visible;
+        /* Allow image to break out of bottom */
     }
 
     .download-content,
@@ -109,6 +116,7 @@
         left: 50%;
         width: 120%;
         max-width: 450px;
-        transform: translateX(-50%) translateY(50px); /* Perfectly center horizontally while dropping down */
+        transform: translateX(-50%) translateY(50px);
+        /* Perfectly center horizontally while dropping down */
     }
 }
