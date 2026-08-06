@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "@/assets/ersalonlogoweb.svg";
+import { ROUTES } from "@/routes/routes";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -11,14 +12,14 @@ export default function Navbar() {
       <div className="container">
         <nav className="navbar">
 
-          <Link to="/" className="logo">
+          <Link to={ROUTES.HOME} className="logo">
             <img src={logo} alt="ER Salonwala" />
           </Link>
 
           <div className={`menu ${isOpen ? "active" : ""}`}>
-            <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
-            <Link to="/business" onClick={() => setIsOpen(false)}>For Business</Link>
+            <Link to={ROUTES.HOME} onClick={() => setIsOpen(false)}>Home</Link>
+            <Link to={ROUTES.SERVICES} onClick={() => setIsOpen(false)}>Services</Link>
+            <Link to={ROUTES.BUSINESS} onClick={() => setIsOpen(false)}>For Business</Link>
 
             <button className="download-btn mobile-btn">
               Download Our App

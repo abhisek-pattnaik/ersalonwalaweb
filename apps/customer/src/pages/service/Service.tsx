@@ -1,3 +1,5 @@
+import "./Service.css";
+
 export default function ServicePage() {
     return (
         <div className="service-container">
@@ -5,4 +7,5 @@ export default function ServicePage() {
         </div>
     )
 }
+
 
