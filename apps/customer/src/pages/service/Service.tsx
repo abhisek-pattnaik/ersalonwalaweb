@@ -1,9 +1,11 @@
 import "./Service.css";
+import masterStylistImg from "@/assets/master_stylist.png";
+import ServiceHeaderPoster from "@/components/service/ServiceHeaderPoster";
 
 export default function ServicePage() {
     return (
         <div className="service-container">
-            <h1>Service Page</h1>
+            <ServiceHeaderPoster image={masterStylistImg} />
         </div>
     )
 }
