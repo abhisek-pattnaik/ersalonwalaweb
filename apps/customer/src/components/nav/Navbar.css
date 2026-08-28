@@ -4,10 +4,10 @@
 
 .header {
   width: 100%;
-  padding: 24px 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  background: #0b0f17;
+  position: relative;
   z-index: 100;
 }
 
