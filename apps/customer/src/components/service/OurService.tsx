@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Star, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 import "./OurService.css";
 
@@ -95,6 +95,19 @@ const categories = ["Hair", "Nails", "Skin Care", "Spa", "Massage", "Bridal Make
 export default function OurService() {
     const [activeTab, setActiveTab] = useState("Hair");
     const [startIndex, setStartIndex] = useState(0);
+    const [itemsPerPage, setItemsPerPage] = useState(4);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 600) setItemsPerPage(1);
+            else if (window.innerWidth <= 900) setItemsPerPage(2);
+            else if (window.innerWidth <= 1200) setItemsPerPage(3);
+            else setItemsPerPage(4);
+        };
+        handleResize(); // Initial check
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const filteredServices = servicesData.filter(
         (service) => service.category === activeTab
@@ -108,7 +121,7 @@ export default function OurService() {
     };
 
     const handleNext = () => {
-        setStartIndex((prev) => Math.min(prev + 1, Math.max(0, displayList.length - 4)));
+        setStartIndex((prev) => Math.min(prev + 1, Math.max(0, displayList.length - itemsPerPage)));
     };
 
     return (
@@ -154,7 +167,7 @@ export default function OurService() {
                     </button>
 
                     <div className="cards-slider-grid">
-                        {displayList.slice(startIndex, startIndex + 4).map((service) => (
+                        {displayList.slice(startIndex, startIndex + itemsPerPage).map((service) => (
                             <div key={service.id} className="service-item-card">
                                 <div className="card-image-box">
                                     <img
@@ -195,7 +208,7 @@ export default function OurService() {
                     <button
                         className="carousel-arrow next-arrow"
                         onClick={handleNext}
-                        disabled={startIndex >= Math.max(0, displayList.length - 4)}
+                        disabled={startIndex >= Math.max(0, displayList.length - itemsPerPage)}
                         aria-label="Next"
                     >
                         <ChevronRight size={28} />

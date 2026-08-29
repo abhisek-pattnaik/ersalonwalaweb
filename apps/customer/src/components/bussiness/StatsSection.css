@@ -1,0 +1,325 @@
+.stats-section {
+  width: 100%;
+  background: #080d15;
+  padding: 32px 0;
+  box-sizing: border-box;
+}
+
+.stats-container {
+  width: min(850px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* =========================================
+   STATS GRID
+========================================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+.stat-card {
+  height: 170px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    145deg,
+    #1b202c,
+    #111723
+  );
+
+  border: 1px solid #31547e;
+
+  border-radius: 48px;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.stat-number {
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 48px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  min-width: 100px;
+
+  text-align: center;
+
+  /* Prevent layout jumping */
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================
+   LABEL
+========================================= */
+
+.stat-label {
+  margin-top: 14px;
+
+  color: #4caeff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.8px;
+
+  text-align: center;
+}
+
+/* =========================================
+   THREE STEPS CARD
+========================================= */
+
+.steps-card {
+  width: 83%;
+
+  min-height: 240px;
+
+  margin: 42px auto 0;
+
+  padding: 45px 40px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    145deg,
+    #1b202c,
+    #111723
+  );
+
+  border: 1px solid #31547e;
+
+  border-radius: 48px;
+}
+
+/* =========================================
+   STEPS TITLE
+========================================= */
+
+.steps-card h2 {
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 19px;
+
+  font-weight: 400;
+
+  text-align: center;
+}
+
+/* =========================================
+   STEPS GRID
+========================================= */
+
+.steps-line {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 35px;
+}
+
+/* Horizontal line */
+
+.steps-line::before {
+  content: "";
+
+  position: absolute;
+
+  top: 16px;
+
+  left: 15%;
+
+  right: 15%;
+
+  height: 1px;
+
+  background: #3a4250;
+
+  z-index: 0;
+}
+
+/* =========================================
+   STEP
+========================================= */
+
+.step {
+  position: relative;
+
+  z-index: 1;
+
+  text-align: center;
+}
+
+/* =========================================
+   STEP NUMBER
+========================================= */
+
+.step-number {
+  width: 34px;
+
+  height: 34px;
+
+  margin: 0 auto 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  background: linear-gradient(
+    145deg,
+    #5c8ff4,
+    #3568e5
+  );
+
+  border-radius: 8px 16px 16px 8px;
+}
+
+/* =========================================
+   STEP TITLE
+========================================= */
+
+.step h3 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+}
+
+/* =========================================
+   STEP DESCRIPTION
+========================================= */
+
+.step p {
+  max-width: 180px;
+
+  margin: 0 auto;
+
+  color: #d0d3d8;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+  }
+
+  .steps-card {
+    width: 100%;
+  }
+
+  .steps-line {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .steps-line::before {
+    display: none;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+  .stats-container {
+    width: calc(100% - 28px);
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    height: 140px;
+
+    border-radius: 35px;
+  }
+
+  .stat-number {
+    font-size: 40px;
+  }
+
+  .stat-label {
+    font-size: 8px;
+  }
+
+  .steps-card {
+    padding: 35px 20px;
+
+    border-radius: 35px;
+  }
+
+  .steps-card h2 {
+    font-size: 17px;
+  }
+}
