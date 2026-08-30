@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+.offer-top {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* Cards */
+
+.offer-cards {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.offer-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px;
+    background: #0f1524;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+}
+
+.offer-info p {
+    margin: 0;
+    color: #7F8CA3;
+    font-size: 10px;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.offer-info h2 {
+    margin: 6px 0 0;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.offer-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.icon-active {
+    border: 1.5px solid #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+    color: #3b82f6;
+}
+
+.icon-expired {
+    border: 1.5px solid #475569;
+    background: rgba(71, 85, 105, 0.1);
+    color: #94a3b8;
+}
+
+.icon-coverage {
+    border: 1.5px solid #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+    color: #3b82f6;
+}
+
+.icon-impact {
+    border: 1.5px solid #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+    color: #3b82f6;
+}
+
+/* Button */
+
+.offer-btn {
+    min-width: 180px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+    color: #fff;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .25s;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.offer-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* Tablet */
+
+@media (max-width:1024px) {
+
+    .offer-top {
+        flex-direction: column;
+    }
+
+    .offer-btn {
+        height: 48px;
+    }
+
+    .offer-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:600px) {
+
+    .offer-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+}
