@@ -1,0 +1,12 @@
+#fillter-button{
+    display:none;
+}
+@media (max-width: 1024px) {
+
+   #filter-section{
+   display:none;
+   }
+   #fillter-button{
+    display:block;
+}
+}

@@ -1,0 +1,168 @@
+.security-card {
+    background: #111827;
+    border: 1px solid #293548;
+    border-radius: 12px;
+    padding: 18px;
+    color: #fff;
+}
+
+.security-header {
+    margin-bottom: 18px;
+}
+
+.security-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.security-icon {
+    color: #60a5fa;
+}
+
+.security-title h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.security-header p {
+    margin-top: 6px;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.security-box {
+    background: #1f2937;
+    border: 1px solid #2f3a4d;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.security-box h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.security-box span {
+    color: #8b97aa;
+    font-size: 12px;
+}
+
+.change-btn {
+    background: transparent;
+    border: 1px solid #374151;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.change-btn:hover {
+    border-color: #60a5fa;
+}
+
+.two-factor-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.shield-circle {
+    width: 28px;
+    height: 28px;
+    background: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessions-title {
+    margin: 20px 0 12px;
+    color: #7d8798;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.session-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.session-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.session-icon {
+    color: #9ca3af;
+}
+
+.session-left h5 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.session-left span {
+    font-size: 11px;
+    color: #7d8798;
+}
+
+.online {
+    background: rgba(59,130,246,.15);
+    color: #60a5fa;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.logout {
+    color: #ff9b8e;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Toggle */
+
+.toggle {
+    width: 40px;
+    height: 22px;
+    border: none;
+    border-radius: 20px;
+    background: #374151;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+}
+
+.toggle.active {
+    background: #59a8ff;
+}
+
+.thumb {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: .3s;
+}
+
+.toggle.active .thumb {
+    left: 21px;
+}

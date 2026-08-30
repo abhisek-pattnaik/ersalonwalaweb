@@ -1,0 +1,94 @@
+.general-settings-card {
+    background: #111827;
+    border: 1px solid #293548;
+    border-radius: 12px;
+    padding: 18px;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-header {
+    margin-bottom: 22px;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-icon {
+    color: #60A5FA;
+}
+
+.header-title h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-header p {
+    margin-top: 6px;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.settings-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #9ca3af;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    background: #0f172a;
+    border: 1px solid #2b3648;
+    border-radius: 8px;
+    color: white;
+    padding: 12px 14px;
+    font-size: 14px;
+    outline: none;
+    transition: .25s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3b82f6;
+}
+
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%239ca3af' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 6.646a.5.5 0 0 1 .708 0L8 9.293l2.646-2.647a.5.5 0 0 1 .708.708L8.354 10.354a.5.5 0 0 1-.708 0L4.646 7.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .settings-form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+}
