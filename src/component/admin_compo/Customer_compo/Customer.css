@@ -1,0 +1,16 @@
+#costomer-button{
+    display:none;
+}
+@media (max-width: 1024px) {
+
+   #costomer-fillter{
+   display:none;
+   }
+   #outlet-button{
+    width:100%;
+}
+  #fillter-button{
+    display:block;
+    margin-bottom:2%;
+  }
+}

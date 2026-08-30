@@ -1,4 +1,14 @@
 services:
+<<<<<<< HEAD
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ersalonwala_web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+=======
   admin:
     build:
       context: ./apps/admin
@@ -16,3 +26,4 @@ services:
     ports:
       - "8081:80"
     restart: unless-stopped
+>>>>>>> origin/main
