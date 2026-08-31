@@ -5,4 +5,6 @@ export const ROUTES = {
     DOWNLOAD: "/download",
     ABOUT: "/about",
     CONTACT: "/contact",
+    TEAM: "/team",
+    GALLERY:"/gallery"
 } as const;

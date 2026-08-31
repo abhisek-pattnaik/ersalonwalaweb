@@ -78,25 +78,6 @@ export default function EngineerSection() {
                     </div>
                 ))}
             </div>
-
-            <div className="cta">
-
-                <h2>
-                    Ready for Your Next
-                    <br />
-                    Transformation?
-                </h2>
-
-                <button>Book Your Session Now →</button>
-
-                <small>
-                    Join thousands who discover their signature salon looks.
-                </small>
-
-            </div>
-
-            <div className="bottom-line"></div>
-
         </section>
     );
 }

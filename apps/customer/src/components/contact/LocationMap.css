@@ -1,0 +1,218 @@
+.location-map-wrapper {
+  width: 100%;
+  height: 277px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #142234;
+}
+
+.location-map {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  background: #142234;
+}
+
+/* Remove Leaflet default attribution */
+.location-map .leaflet-control-attribution {
+  display: none;
+}
+
+/* ---------------------------------
+   LOCATION PIN
+---------------------------------- */
+
+.custom-location-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.location-pin {
+  width: 50px;
+  height: 60px;
+
+  position: relative;
+}
+
+.pin-circle {
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+
+  left: 4px;
+  top: 0;
+
+  background: #ef587a;
+
+  border-radius: 50%;
+}
+
+.pin-point {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  left: 11px;
+  top: 29px;
+
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 28px solid #ef587a;
+}
+
+.pin-circle::after {
+  content: "";
+
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  left: 15px;
+  top: 15px;
+
+  background: #ef587a;
+
+  border-radius: 50%;
+}
+
+
+/* ---------------------------------
+   BUCKINGHAM PALACE
+---------------------------------- */
+
+.palace-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.palace-building {
+  width: 82px;
+  height: 45px;
+
+  position: relative;
+
+  background: #d6d8d7;
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Roof */
+.palace-roof {
+  position: absolute;
+
+  width: 90px;
+  height: 8px;
+
+  left: -4px;
+  top: -5px;
+
+  background: #bfc2c2;
+
+  border-radius: 2px 2px 0 0;
+}
+
+/* Columns */
+.palace-columns {
+  position: absolute;
+
+  left: 8px;
+  right: 8px;
+  bottom: 5px;
+
+  height: 27px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.palace-columns span {
+  width: 8px;
+  height: 25px;
+
+  background: #f0f0ef;
+
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+}
+
+
+/* ---------------------------------
+   UNDERGROUND MARKERS
+---------------------------------- */
+
+.tube-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.tube-circle {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 2px solid #e91d42;
+
+  border-radius: 50%;
+
+  box-sizing: border-box;
+}
+
+.tube-circle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 20px;
+  height: 4px;
+
+  background: #e91d42;
+
+  border-radius: 4px;
+}
+
+.tube-circle span {
+  position: relative;
+
+  z-index: 1;
+
+  color: #ffffff;
+
+  font-size: 7px;
+}
+
+
+/* ---------------------------------
+   RESPONSIVE
+---------------------------------- */
+
+@media (max-width: 768px) {
+  .location-map-wrapper {
+    height: 250px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-map-wrapper {
+    height: 220px;
+    border-radius: 16px;
+  }
+}

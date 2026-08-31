@@ -42,6 +42,37 @@
     color: #60a5fa;
 }
 
+/* Contact Info Layout */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+    color: #94a3b8;
+    align-items: flex-start;
+}
+
+.contact-label {
+    font-weight: 500;
+    color: #ffffff;
+    min-width: 70px;
+}
+
+.contact-value {
+    color: #94a3b8;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+}
+
+a.contact-value:hover {
+    color: #60a5fa;
+}
+
 /* Responsive Media Queries for All Devices */
 
 /* Tablets & Small Laptops (max-width: 992px) */

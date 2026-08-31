@@ -7,6 +7,10 @@ interface CountUpProps {
   suffix?: string;
 }
 
+interface StatsSelectionProps {
+  isNeedThreeSteps?: boolean;
+}
+
 function CountUp({
   end,
   duration = 2000,
@@ -54,7 +58,7 @@ function CountUp({
   );
 }
 
-export default function StatsSection() {
+export default function StatsSection({ isNeedThreeSteps = true }: StatsSelectionProps) {
   return (
     <section className="stats-section">
       <div className="stats-container">
@@ -124,8 +128,8 @@ export default function StatsSection() {
         </div>
 
         {/* ================= THREE STEPS ================= */}
-
-        <div className="steps-card">
+        {isNeedThreeSteps && (
+          <div className="steps-card">
 
           <h2>
             Launch in Three Simple Steps
@@ -186,6 +190,7 @@ export default function StatsSection() {
 
           </div>
         </div>
+        )}
 
       </div>
     </section>

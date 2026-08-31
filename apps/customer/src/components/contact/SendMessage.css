@@ -1,0 +1,188 @@
+.send-message-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #080d16;
+  box-sizing: border-box;
+}
+
+.send-message-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.send-message-glass {
+  width: 100%;
+  border-radius: 20px;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  box-sizing: border-box;
+  
+  /* Enhanced Glassmorphism effect overlay */
+  background: linear-gradient(
+    135deg,
+    rgba(70, 50, 40, 0.6) 0%,
+    rgba(40, 25, 15, 0.8) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ---------------- Content Left ---------------- */
+.send-message-content {
+  flex: 1;
+  max-width: 400px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.sm-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.sm-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+  color: #ffffff;
+}
+
+.sm-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin: 0;
+}
+
+/* ---------------- Form Right ---------------- */
+.send-message-form {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-row {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.two-cols .sm-input {
+  flex: 1;
+}
+
+.sm-input {
+  background: rgba(20, 10, 5, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.sm-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sm-input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(20, 10, 5, 0.35);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.sm-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-submit-row {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.sm-submit-btn {
+  background: #ffffff;
+  color: #333333;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 32px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.sm-submit-btn:hover {
+  background: #e5e5e5;
+  transform: translateY(-2px);
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 900px) {
+  .send-message-glass {
+    flex-direction: column;
+    padding: 60px 40px;
+  }
+  
+  .send-message-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .send-message-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .send-message-glass {
+    padding: 40px 20px;
+  }
+  
+  .form-row.two-cols {
+    flex-direction: column;
+  }
+  
+  .sm-title {
+    font-size: 36px;
+  }
+}

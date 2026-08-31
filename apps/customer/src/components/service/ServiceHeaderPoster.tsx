@@ -19,17 +19,9 @@ export default function ServiceHeaderPoster({
             <div className="hero-overlay"></div>
 
             <div className="hero-content">
-                <h1>
-                    Find a service
-                    <br />
-                    close to you
-                </h1>
+                <h1 dangerouslySetInnerHTML={{ __html: title.replace(/\n/g, '<br />') }}></h1>
 
-                <p>
-                    There are many variation of passages are Ipsum available,
-                    <br />
-                    majority have suffered alteration in some form.
-                </p>
+                <p dangerouslySetInnerHTML={{ __html: description.replace(/\n/g, '<br />') }}></p>
             </div>
         </section>
     );

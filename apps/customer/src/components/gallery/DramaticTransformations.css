@@ -1,0 +1,161 @@
+.transformations-section {
+    background: #0c1220;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+    margin: 0 auto;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.image-after, .image-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Grayscale for Before to make it look like the screenshot */
+.image-before {
+    filter: grayscale(100%);
+    z-index: 1;
+}
+
+.image-after {
+    z-index: 0;
+}
+
+.slider-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    cursor: ew-resize;
+    margin: 0;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background-color: #fff;
+    z-index: 5;
+    transform: translateX(-50%);
+    pointer-events: none; /* Let the invisible input handle the events */
+    border-radius: 999px;
+}
+
+.slider-handle-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.label-badge {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 12px 36px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 4;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.label-before {
+    left: 20%;
+}
+
+.label-after {
+    right: 20%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .slider-container {
+        height: 450px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        height: 350px;
+        border-radius: 24px;
+    }
+    
+    .label-badge {
+        padding: 8px 24px;
+        font-size: 14px;
+    }
+
+    .label-before {
+        left: 5%;
+    }
+
+    .label-after {
+        right: 5%;
+    }
+
+    .slider-handle-button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .transformations-section {
+        padding: 60px 0;
+    }
+
+    .slider-container {
+        height: 250px;
+        border-radius: 16px;
+        width: 95%;
+    }
+
+    .label-badge {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+
+    .slider-handle-button {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .slider-handle-button svg {
+        width: 14px;
+        height: 14px;
+    }
+}

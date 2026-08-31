@@ -1,0 +1,219 @@
+.business-feedback-section {
+    width: 100%;
+    padding: 70px 0 80px;
+    background: #121826;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.business-feedback-container {
+    width: min(1200px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.business-feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.business-feedback-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin: 0;
+}
+
+.business-feedback-subtitle-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.business-feedback-line {
+    height: 1px;
+    width: 180px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.business-feedback-subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    color: #94a3b8;
+    letter-spacing: 0.02em;
+}
+
+/* GRID & CARDS */
+
+.business-feedback-grid {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 20px 4px 40px 4px;
+    /* Added padding to prevent shadow clipping */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.business-feedback-grid::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.business-feedback-card {
+    flex: 0 0 auto;
+    /* Prevent shrinking and squashing */
+    width: 280px;
+    /* Fixed width instead of flex: 1 */
+    background: #141a26;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    padding: 32px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-feedback-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* AVATAR */
+
+.business-feedback-avatar-container {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #242c3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.business-feedback-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CONTENT */
+
+.business-feedback-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 8px 0 4px 0;
+    line-height: 1.2;
+}
+
+.business-feedback-handle {
+    font-size: 14px;
+    color: #8a96a8;
+    margin: 0 0 24px 0;
+    font-weight: 400;
+}
+
+.business-feedback-quote {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin: 0 0 32px 0;
+    flex-grow: 1;
+    font-weight: 400;
+}
+
+/* STYLIST PILL BUTTON */
+
+.business-feedback-stylist-btn {
+    background-color: #ffffff;
+    color: #0f172a;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    align-self: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.business-feedback-stylist-btn:hover {
+    background-color: #f1f5f9;
+    transform: scale(1.03);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+    .business-feedback-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 36px;
+    }
+
+    .business-feedback-line {
+        width: 120px;
+    }
+
+    .business-feedback-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .business-feedback-section {
+        padding: 50px 0 60px;
+    }
+
+    .business-feedback-container {
+        width: calc(100% - 32px);
+    }
+
+    .business-feedback-title {
+        font-size: 32px;
+    }
+
+    .business-feedback-grid {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-feedback-card {
+        padding: 24px 20px;
+        min-width: 250px;
+    }
+
+    .business-feedback-avatar-container {
+        top: 20px;
+        right: 20px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .business-feedback-name {
+        font-size: 19px;
+    }
+}

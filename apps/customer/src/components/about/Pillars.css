@@ -1,0 +1,133 @@
+.pillars-section {
+  width: 100%;
+  background: #080d16;
+  padding: 120px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.pillars-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------- HEADER ---------- */
+
+.pillars-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pillars-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.pillars-header p {
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ---------- CARDS ---------- */
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.pillar-card {
+  position: relative;
+  min-height: 350px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    135deg,
+    #5d8ff0 0%,
+    #426de5 55%,
+    #3158d8 100%
+  );
+  border-radius: 16px 80px 16px 80px;
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- ICON ---------- */
+
+.pillar-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background: #050b14;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.pillar-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- TITLE ---------- */
+
+.pillar-card h3 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* ---------- DESCRIPTION ---------- */
+
+.pillar-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1024px) {
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pillars-section {
+    padding: 80px 20px;
+  }
+
+  .pillars-header h2 {
+    font-size: 36px;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-card {
+    min-height: 320px;
+  }
+}
