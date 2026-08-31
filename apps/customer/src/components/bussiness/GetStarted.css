@@ -1,0 +1,148 @@
+.business-get-started-section {
+    position: relative;
+    width: 100%;
+    background-color: #0b0f17;
+    padding: 160px 20px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.bgs-background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9    ;
+    z-index: 0;
+    filter: blur(1px);
+}
+
+.bgs-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(11, 15, 23, 0.4), #0b0f17);
+    z-index: 1;
+}
+
+.bgs-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bgs-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bgs-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    line-height: 1.15;
+    font-weight: 500;
+    margin: 0 0 24px 0;
+}
+
+.bgs-highlight {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #4f7df3;
+    display: inline-block;
+}
+
+.bgs-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin: 0 0 40px 0;
+    max-width: 700px;
+}
+
+.bgs-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgs-btn {
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.bgs-btn.primary {
+    background: linear-gradient(180deg, #5F97F6 0%, #3352E8 100%);
+    color: #ffffff;
+}
+
+.bgs-btn.primary:hover {
+    background: linear-gradient(180deg, #4277F5 0%, #1A3CC7 100%);
+    transform: translateY(-2px);
+}
+
+.bgs-btn.secondary {
+    background: linear-gradient(180deg, #FFFFFF 0%, #E5E7EB 100%);
+    color: #0f172a;
+}
+
+.bgs-btn.secondary:hover {
+    background: linear-gradient(180deg, #E5E7EB 0%, #F3F4F6 100%);
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .business-get-started-section {
+        padding: 100px 16px;
+        min-height: auto;
+    }
+
+    .bgs-title {
+        font-size: 44px;
+    }
+
+    .bgs-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .bgs-title {
+        font-size: 38px;
+    }
+
+    .bgs-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bgs-btn {
+        width: 100%;
+    }
+}

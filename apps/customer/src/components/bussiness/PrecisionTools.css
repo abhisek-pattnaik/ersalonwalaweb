@@ -1,0 +1,133 @@
+.precision-tools-section {
+    position: relative;
+    width: 100%;
+    background-color: #0b0f17;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.pt-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pt-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 700px;
+}
+
+.pt-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+    color: #ffffff;
+}
+
+.pt-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.pt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+.pt-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pt-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(85, 123, 248, 0.3);
+    background-color: #557bf8; /* Make card blue on hover */
+}
+
+.pt-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    background-color: var(--icon-bg);
+    color: var(--icon-color);
+    transition: all 0.3s ease;
+}
+
+.pt-card:hover .pt-icon-wrapper {
+    background-color: #0b0f17;
+    color: #ffffff;
+}
+
+.pt-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.pt-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #0f172a;
+    transition: color 0.3s ease;
+}
+
+.pt-card:hover .pt-card-title {
+    color: #ffffff;
+}
+
+.pt-card-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #64748b;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.pt-card:hover .pt-card-description {
+    color: #e0e7ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .pt-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .pt-title {
+        font-size: 32px;
+    }
+    
+    .pt-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .precision-tools-section {
+        padding: 60px 16px;
+    }
+}
