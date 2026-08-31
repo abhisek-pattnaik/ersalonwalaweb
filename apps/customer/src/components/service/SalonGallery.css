@@ -1,7 +1,7 @@
 .salon-gallery-section {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 250px;
     background-color: #080d15;
     overflow: hidden;
     display: flex;
@@ -13,7 +13,8 @@
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 4px; /* Slight gap between images like in the screenshot */
+    gap: 4px;
+    /* Slight gap between images like in the screenshot */
 }
 
 .gallery-item {
@@ -43,22 +44,24 @@
 */
 .gallery-curve-top {
     position: absolute;
-    top: -150px;
+    top: -180px;
     left: -10%;
     width: 120%;
     height: 250px;
-    background-color: #080d15; /* Match the page background */
+    background-color: #080d15;
+    /* Match the page background */
     border-radius: 50%;
     z-index: 2;
 }
 
 .gallery-curve-bottom {
     position: absolute;
-    bottom: -150px;
+    bottom: -180px;
     left: -10%;
     width: 120%;
     height: 250px;
-    background-color: #080d15; /* Match the page background */
+    background-color: #080d15;
+    /* Match the page background */
     border-radius: 50%;
     z-index: 2;
 }
@@ -74,10 +77,12 @@
     .salon-gallery-section {
         height: 200px;
     }
+
     .gallery-images {
         flex-wrap: nowrap;
         overflow-x: auto;
     }
+
     .gallery-item {
         flex: 0 0 33.333%;
     }
