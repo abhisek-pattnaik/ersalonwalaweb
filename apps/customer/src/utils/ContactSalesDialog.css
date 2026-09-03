@@ -1,0 +1,321 @@
+.contact-overlay {
+    position: fixed;
+    inset: 0;
+
+    /* Dark background over your existing dark page */
+    background: rgba(0, 0, 0, 0.72);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    box-sizing: border-box;
+
+    z-index: 9999;
+
+    overflow-y: auto;
+}
+
+/* =========================
+   DIALOG
+========================= */
+
+.contact-dialog {
+    position: relative;
+
+    width: 100%;
+    max-width: 520px;
+
+    max-height: calc(100vh - 60px);
+
+    overflow-y: auto;
+
+    padding: 34px;
+
+    box-sizing: border-box;
+
+    background: #111827;
+
+    border: 1px solid #374151;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+
+    animation: dialogOpen 0.2s ease-out;
+}
+
+@keyframes dialogOpen {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-button {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #374151;
+
+    border-radius: 50%;
+
+    background: #1f2937;
+
+    color: #9ca3af;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.close-button:hover {
+    background: #374151;
+
+    color: #ffffff;
+
+    border-color: #4b5563;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.contact-header {
+    text-align: center;
+
+    margin-bottom: 28px;
+
+    padding: 0 20px;
+}
+
+.contact-header h2 {
+    margin: 0 0 10px;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.contact-header p {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.contact-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+/* =========================
+   CONTACT ITEM
+========================= */
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 70px;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    background: #1f2937;
+
+    border: 1px solid #374151;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+    background: #263449;
+
+    border-color: #4d7cff;
+
+    transform: translateY(-1px);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.contact-item>span {
+    width: 44px;
+
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    border: 1px solid #374151;
+
+    font-size: 20px;
+}
+
+/* =========================
+   CONTACT TEXT
+========================= */
+
+.contact-item div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.contact-item small {
+    color: #9ca3af;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+.contact-item strong {
+    color: #f9fafb;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.contact-footer {
+    margin-top: 24px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #374151;
+
+    text-align: center;
+}
+
+.contact-footer p {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+    .contact-overlay {
+        padding: 20px 14px;
+    }
+
+    .contact-dialog {
+        max-height: calc(100vh - 40px);
+
+        padding: 28px 18px;
+
+        border-radius: 18px;
+    }
+
+    .contact-header {
+        padding: 0 10px;
+    }
+
+    .contact-header h2 {
+        font-size: 23px;
+    }
+
+    .contact-item {
+        min-height: 64px;
+
+        padding: 12px;
+    }
+
+    .contact-item>span {
+        width: 40px;
+        height: 40px;
+
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-overlay {
+        padding: 20px 14px;
+    }
+
+    .contact-dialog {
+        padding: 25px 18px;
+
+        border-radius: 16px;
+    }
+
+    .contact-header h2 {
+        font-size: 22px;
+    }
+
+    .contact-item {
+        padding: 13px;
+    }
+}

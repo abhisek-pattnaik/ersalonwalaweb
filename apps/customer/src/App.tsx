@@ -9,6 +9,7 @@ import './App.css';
 import GalleryPage from './pages/footer-pages/gallery/GalleryPage';
 import AboutPage from './pages/footer-pages/about/AboutPage';
 import ContactUsPage from './pages/footer-pages/ContactUs/ContactUsPage';
+import ContactTeamPage from './pages/contact-team/ContactTeamPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path={ROUTES.GALLERY} element={<GalleryPage />} />
         <Route path={ROUTES.ABOUT} element={<AboutPage />} />
         <Route path={ROUTES.CONTACT} element={<ContactUsPage />} />
+        <Route path={ROUTES.CONTACT_TEAM} element={<ContactTeamPage />} />
       </Routes>
     </BrowserRouter>
   );

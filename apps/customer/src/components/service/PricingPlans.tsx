@@ -1,8 +1,12 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "@/routes/routes";
 import "./PricingPlans.css";
 
 interface Plan {
   name: string;
   price?: string;
+  amount?: number;
   priceSuffix?: string;
   description?: string;
   features: string[];
@@ -14,6 +18,7 @@ const plans: Plan[] = [
   {
     name: "Starter",
     price: "₹1,549",
+    amount: 1549,
     priceSuffix: "/month",
     features: [
       "Online Booking",
@@ -26,6 +31,7 @@ const plans: Plan[] = [
   {
     name: "Professional",
     price: "₹6,449",
+    amount: 6449,
     priceSuffix: "/month",
     features: [
       "Unlimited Booking",
@@ -49,7 +55,51 @@ const plans: Plan[] = [
   },
 ];
 
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
+}
+
 export default function PricingPlans() {
+  const navigate = useNavigate();
+  const handlePayment = (plan: Plan) => {
+    // Enterprise doesn't have a fixed price
+    if (!plan.amount) {
+      navigate(ROUTES.CONTACT);
+      console.log("Contact Sales Redirect");
+      return;
+    }
+
+    const options = {
+      key: "rzp_test_TTuRSHdm7blWDJ",
+
+      // Razorpay expects amount in paise
+      amount: plan.amount * 100,
+
+      currency: "INR",
+
+      name: "ER Salon Wala",
+
+      description: `${plan.name} Plan`,
+
+      handler: (response: any) => {
+        console.log("Payment Successful");
+        console.log("Payment ID:", response.razorpay_payment_id);
+        // console.log("Order ID:", response.razorpay_order_id);
+        console.log("Signature:", response.razorpay_signature);
+      },
+
+      theme: {
+        color: "#3399cc",
+      },
+    };
+
+    const razorpay = new window.Razorpay(options);
+
+    razorpay.open();
+  };
+
   return (
     <section className="pricing-section">
       <div className="pricing-container">
@@ -61,9 +111,8 @@ export default function PricingPlans() {
         <div className="plans-grid">
           {plans.map((plan) => (
             <div
-              className={`plan-card ${
-                plan.popular ? "popular" : ""
-              }`}
+              className={`plan-card ${plan.popular ? "popular" : ""
+                }`}
               key={plan.name}
             >
               {plan.popular && (
@@ -108,7 +157,10 @@ export default function PricingPlans() {
                   ))}
                 </ul>
 
-                <button className="plan-button">
+                <button
+                  className="plan-button"
+                  onClick={() => handlePayment(plan)}
+                >
                   {plan.buttonText}
                 </button>
 
@@ -120,4 +172,4 @@ export default function PricingPlans() {
       </div>
     </section>
   );
-}   
+}
